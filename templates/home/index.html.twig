@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Accueil{% endblock %}
 
 {% block body %}
 <style>
@@ -9,12 +9,18 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/Users/val59/OneDrive/Documents/Travail/Formation/Devoirs/3 - Niveau III/realiser un site e-commerce/Stubborn/stubborn-shop/src/Controller/HomeController.php</code></li>
-        <li>Your template at <code>C:/Users/val59/OneDrive/Documents/Travail/Formation/Devoirs/3 - Niveau III/realiser un site e-commerce/Stubborn/stubborn-shop/templates/home/index.html.twig</code></li>
-    </ul>
+    <nav>
+        <ul>
+            <li><a href="/">Accueil</a></li>
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                <li><a href="/product">Boutique</a></li>
+                <li><a href="/cart">Panier</a></li>
+                <li><a href="/logout">Se déconnecter</a></li>
+            {% else %}
+                <li><a href="/login">Se connecter</a></li>
+                <li><a href="/register">S'inscrire</a></li>
+            {% endif %}
+        </ul>
+    </nav>
 </div>
 {% endblock %}
