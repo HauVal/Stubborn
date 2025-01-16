@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Administrateur{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+
+<header>
+    <div class="logo">
+        <img src="{{ asset('images/Logo.png') }}" alt="Logo">
+        <p>Don't compromise on your look</p>
+    </div>
+
+    <h1>Back-Office</h1>
+    
+    <nav>
+        <a href="/">Accueil</a>
+        <a href="/logout">Se déconnecter</a>
+    </nav>
+</header>
+{% endblock %}
