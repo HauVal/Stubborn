@@ -2,7 +2,6 @@ header {
     border-bottom-style: solid;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
 }
 
@@ -15,6 +14,24 @@ header {
 
 header img {
     width: 150px;
+}
+
+nav {
+    display: flex;
+}
+
+a {
+    margin: 15px;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.select {
+    font-weight: 900;
+    text-decoration: underline;
 }
 
 footer {

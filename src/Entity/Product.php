@@ -28,6 +28,27 @@ class Product
     #[ORM\Column]
     private ?bool $featured = null;
 
+    #[ORM\Column(type: 'integer', options: ['default' => 0])]
+    private int $stockXs = 0;
+
+    #[ORM\Column(type: 'integer', options: ['default' => 0])]
+    private int $stockS = 0;
+
+    #[ORM\Column(type: 'integer', options: ['default' => 0])]
+    private int $stockM = 0;
+
+    #[ORM\Column(type: 'integer', options: ['default' => 0])]
+    private int $stockL = 0;
+
+    #[ORM\Column(type: 'integer', options: ['default' => 0])]
+    private int $stockXl = 0;
+
+    #[ORM\Column(type: 'boolean', options: ['default' => false])]
+    private bool $highlight = false;
+
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private ?string $image = null;
+
     public function getId(): ?int
     {
         return $this->id;
